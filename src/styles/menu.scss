@@ -1,0 +1,45 @@
+.container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.menu {
+  height: 50vh;
+  width: 40vw;
+  margin: auto;
+  padding: 20px;
+  background-color: $mainColor;
+  border-radius: 15px;
+  text-align: center;
+
+  & > .btns {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+
+    *.active {
+      border: 2px solid $thirdColor;
+    }
+  }
+
+  & > .description {
+    text-align: center;
+  }
+}
+
+//MEDIA
+@media (max-width: 453px) {
+  .menu {
+    width: 80vw;
+    height: 60vh;
+    font-size: 0.9rem;
+
+    & > .btns {
+      width: 100%;
+    }
+  }
+}

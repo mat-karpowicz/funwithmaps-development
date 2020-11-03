@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+  font-family: "Poppins", sans-serif;
+}
+
+* > ::after,
+* > ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+//GLOBALS
+.flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-jc-c {
+  justify-content: center;
+}
+.flex-jc-sa {
+  justify-content: space-around;
+}
+.flex-jc-sb {
+  justify-content: space-between;
+}
+.flex-ai-c {
+  align-items: center;
+}
+
+.btn {
+  width: 100px;
+  padding: 0.2rem;
+  background-color: $secondColor;
+  border: none;
+  border-radius: 15px;
+  color: white;
+  text-align: center;
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+.popup {
+  text-align: center;
+  & > div {
+    & > button {
+      background-color: $mainColor;
+    }
+  }
+}
+
+.marker {
+  transform: translate(-50%, -100%);
+}
+
+//MEDIA
+
+@media (max-width: 453px) {
+  .mapboxgl-popup-content {
+    width: 150px;
+    height: auto;
+  }
+  .popup {
+    font-size: 0.7rem;
+    & > div {
+      & > button {
+        background-color: $mainColor;
+        min-width: 50px;
+      }
+    }
+  }
+  .marker {
+    width: 20px;
+    height: auto;
+  }
+}

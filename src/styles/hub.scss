@@ -1,0 +1,83 @@
+.hub {
+  min-height: 200px;
+  min-width: 450px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  color: white;
+  background-color: rgba($color: #201f1f, $alpha: 0.9);
+  z-index: 2;
+
+  & > .hub-box {
+    justify-content: space-between;
+    padding: 15px;
+
+    & > .hub-info {
+      flex: 3;
+
+      & > .country {
+        color: $thirdColor;
+        font-size: 1.2rem;
+      }
+
+      & > .flag {
+        width: 80px;
+        height: auto;
+      }
+    }
+    & > .hub-stats {
+      flex: 1;
+    }
+  }
+
+  & > .answer {
+    padding: 15px;
+    text-align: center;
+
+    & > .correct {
+      color: rgb(75, 202, 36);
+    }
+    & > .wrong {
+      color: rgb(175, 34, 34);
+    }
+  }
+}
+
+.hub-btn {
+  height: 25px;
+  margin-left: 10px;
+  font-size: 0.8rem;
+  background-color: $thirdColor;
+}
+
+@media (max-width: 453px) {
+  .hub {
+    font-size: 0.6rem;
+    min-width: 200px;
+    min-height: 80px;
+
+    & > .hub-box {
+      justify-content: space-between;
+      padding: 10px;
+      & > .hub-info {
+        & > .country {
+          font-size: 0.7rem;
+        }
+
+        & > .flag {
+          width: 30px;
+        }
+      }
+    }
+    & > .answer {
+      font-size: 0.7rem;
+      padding: 5px;
+    }
+  }
+
+  .hub-btn {
+    font-size: 0.5rem;
+    height: 15px;
+    width: auto;
+  }
+}

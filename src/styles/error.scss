@@ -1,0 +1,25 @@
+.error {
+  width: 150px;
+
+  height: 40px;
+  position: absolute;
+  top: 0;
+  color: white;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: red;
+  animation: error-anim 2s forwards;
+  text-align: center;
+  z-index: 2;
+}
+
+@keyframes error-anim {
+  from {
+    top: 0;
+    opacity: 0;
+  }
+  to {
+    top: 80px;
+    opacity: 1;
+  }
+}
